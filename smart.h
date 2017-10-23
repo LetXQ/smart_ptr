@@ -1,3 +1,5 @@
+#ifndef SMART_PTR_H_
+#define SMART_PTR_H_
 #include <iostream>
 
 using namespace std;
@@ -66,3 +68,4 @@ public:
         }
     }
 };
+#endif // SMART_PTR_H_
