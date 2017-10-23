@@ -1,5 +1,6 @@
 #include <iostream>
 #include "smart.h"
+#include "handle.h"
 using namespace std;
 
 int main(void)
@@ -14,6 +15,16 @@ int main(void)
             *ptr1 = 20;
             cout << *ptr2 << endl;
         }
+    }
+
+    {
+        handle_t<int> hp(new int(42));
+        {
+            handle_t<int> hp2 = hp;
+            cout<<*hp<<"  "<<*hp2<<endl;
+            *hp2 = 10;
+        }
+        cout<<*hp<<endl;
     }
     return 0;
 }
